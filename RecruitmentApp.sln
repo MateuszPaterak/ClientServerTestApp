@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClient", "WpfClient\WpfClient.csproj", "{6BE3510B-AF32-490B-9237-B7A2DB182B41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginCsv", "PluginCsv\PluginCsv.csproj", "{53C1E436-7356-42E6-9F11-C84A194621C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{4A91F769-DFF3-474A-8136-0C778858BCC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE3510B-AF32-490B-9237-B7A2DB182B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE3510B-AF32-490B-9237-B7A2DB182B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE3510B-AF32-490B-9237-B7A2DB182B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE3510B-AF32-490B-9237-B7A2DB182B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C1E436-7356-42E6-9F11-C84A194621C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C1E436-7356-42E6-9F11-C84A194621C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C1E436-7356-42E6-9F11-C84A194621C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C1E436-7356-42E6-9F11-C84A194621C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A91F769-DFF3-474A-8136-0C778858BCC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A91F769-DFF3-474A-8136-0C778858BCC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A91F769-DFF3-474A-8136-0C778858BCC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A91F769-DFF3-474A-8136-0C778858BCC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
