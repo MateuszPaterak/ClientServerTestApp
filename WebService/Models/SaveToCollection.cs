@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using PluginInterface;
 
 namespace WebService.Models
 {
     public class SaveToCollection : IWriteUserData
     {
-        private List<User> _users = new List<User>();
-        public void Write(User user)
+        private List<IUser> _users = new List<IUser>();
+        public void Write(IUser user, string path = null)
         {
             _users.Add(user);
         }

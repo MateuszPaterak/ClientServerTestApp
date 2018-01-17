@@ -150,6 +150,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Plugins\PluginInterface.csproj">
+      <Project>{4B097F94-7ECD-4EA9-A1BC-BB3E02FE3973}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebService\WebService.csproj">
       <Project>{4A91F769-DFF3-474A-8136-0C778858BCC2}</Project>
       <Name>WebService</Name>

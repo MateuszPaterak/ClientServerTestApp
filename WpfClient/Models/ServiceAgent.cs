@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using Caliburn.Micro;
+using PluginInterface;
 using WebService.Models;
 using WpfClient.ViewModels;
 using Action = System.Action;
@@ -30,20 +31,7 @@ namespace WpfClient.Models
         public static async Task<bool> AddUserAsync(User user)
         {
             var response = await _client.PostAsJsonAsync("api/AddUser", user);
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-                /*Application.Current.Dispatcher.BeginInvoke(() =>
-                {
-                    ((MainWindow)Application.Current.MainWindow).Notification 
-                        = "Użytkownik został dodany";
-                });*/
-                /*Application.Current.Dispatcher.BeginInvoke(
-                    new System.Action(() =>
-                        Notification = "Użytkownik został dodany")
-                );*/
-            }
-            return false;
+            return response.IsSuccessStatusCode;
         }
     }
 }

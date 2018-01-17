@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Autofac.Core;
+﻿using PluginInterface;
 
 namespace WebService.Models
 {
@@ -16,11 +12,11 @@ namespace WebService.Models
             _saveData = saveData;
         }
 
-        public void WriteUser(User user)
+        public void WriteUser(IUser user, string filePath)
         {    
             lock (m_SyncObject)
             {
-                _saveData.Write(user);
+                _saveData.Write(user, filePath);
             }
         
         }

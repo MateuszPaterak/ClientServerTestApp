@@ -167,7 +167,6 @@
     <Compile Include="Models\Log4net\MyBootStrapper.cs" />
     <Compile Include="Models\Repo.cs" />
     <Compile Include="Models\SaveToCollection.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plugins\PluginInterface.csproj">
+      <Project>{4b097f94-7ecd-4ea9-a1bc-bb3e02fe3973}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

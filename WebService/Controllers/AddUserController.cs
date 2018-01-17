@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Web;
 using System.Web.Http;
-using Autofac;
-using Autofac.Core;
+using PluginInterface;
 using WebService.Models;
 
 namespace WebService.Controllers
@@ -13,13 +8,22 @@ namespace WebService.Controllers
     public class AddUserController : ApiController
     {
         private IRepo _myRepo;
-        public AddUserController(IRepo repo)
+        private string _filePath;
+        public AddUserController(IRepo repo, string filePath =null)
         {
             _myRepo = repo;
+            if (string.IsNullOrEmpty(filePath))
+            {
+                _filePath = HttpContext.Current.Server.MapPath("~/") + "users.csv";
+            }
+            else
+            {
+                _filePath = filePath;
+            }
         }
-        public IHttpActionResult PostAddUser(User user)
+        public IHttpActionResult PostAddUser(IUser user)
         {
-            _myRepo.WriteUser(user);
+            _myRepo.WriteUser(user, _filePath);
             return Ok();
         }
     }

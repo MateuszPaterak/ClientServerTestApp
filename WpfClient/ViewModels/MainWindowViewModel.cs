@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
-using WebService.Models;
+using PluginInterface;
 using WpfClient.Models;
 
 namespace WpfClient.ViewModels
@@ -57,12 +51,16 @@ namespace WpfClient.ViewModels
 
         public async void BtAddUser()
         {
-            var res = await ServiceAgent.AddUserAsync(_user);
-            if(res)
-            { MessageBox.Show("Informacja została wysłana");}
-            else
-            { MessageBox.Show("Wystąpił problem");}
-            //Notification = "Użytkownik został dodany";
+            try
+            {
+                var res = await ServiceAgent.AddUserAsync(_user);
+                MessageBox.Show(res ? "Użytkownik został zapisany" : "Wystąpił problem");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

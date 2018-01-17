@@ -1,6 +1,4 @@
-﻿using PluginInterface;
-
-namespace WebService.Models
+﻿namespace PluginInterface
 {
     public interface IWriteUserData
     {
